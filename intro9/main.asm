@@ -2,10 +2,10 @@
 global _start
 
 section .data
-mstr db 'Hello world'
+string db 'Hello world'
 
 section .text
-_start: mov edi, mstr
+_start: mov edi, string 
 ; Sought value
 ;	mov al, 'm'
 	mov al, 'e'
@@ -17,9 +17,9 @@ _start: mov edi, mstr
 ; Else ECX !=0 then we find <character> in <mstr>
 	cmp ecx, 0
 	jz els
-	PRINT 'mstr has '
+	PRINT 'string has '
 	PUTCHAR al
 	jmp quit
-els:	PRINT 'mstr does not has '
+els:	PRINT 'string does not has '
 	PUTCHAR al
 quit:	FINISH	
