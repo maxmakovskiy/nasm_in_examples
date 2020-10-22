@@ -117,6 +117,11 @@ _start:
 	mov ecx, file_content 
 	int 80h	
 
+	; close file
+	mov eax, 6
+	mov ebx, edx
+	int 80h
+
 exit:
 	mov eax, 1
 	mov ebx, 0
