@@ -1,0 +1,4 @@
+#!/bin/bash
+mkdir $1
+touch $1/main.c
+cp nums_of_chars/Makefile $1/
